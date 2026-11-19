@@ -1,0 +1,31 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 7%;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(147, 51, 234, 0.12);
+}
+
+.logo {
+  color: var(--primary-pink);
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.header nav {
+  display: flex;
+  gap: 25px;
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--dark-purple);
+  font-weight: 500;
+}
+
+.header a:hover {
+  color: var(--primary-pink);
+}
