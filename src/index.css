@@ -1,3 +1,14 @@
+
+:root {
+  --primary-pink: #D946A8;
+  --primary-purple: #9333EA;
+  --light-pink: #FDF2F8;
+  --light-purple: #FAF5FF;
+  --dark-purple: #312044;
+  --text-color: #444444;
+  --white: #FFFFFF;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +17,24 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #FAF5FF;
-  color: #24152F;
+  background-color: var(--white);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page-container {
+  width: 100%;
+  min-height: 70vh;
+  padding: 40px 7%;
+}
+
+h1, h2, h3 {
+  color: var(--dark-purple);
 }
