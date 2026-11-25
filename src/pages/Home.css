@@ -1,0 +1,260 @@
+
+.home-page {
+  width: 100%;
+}
+
+.hero-section {
+  min-height: 75vh;
+  padding: 60px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: linear-gradient(120deg, #FDF2F8, #FAF5FF);
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-tagline {
+  display: inline-block;
+  color: #D946A8;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #312044;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+  color: #9333EA;
+}
+
+.hero-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.explore-btn,
+.learn-btn {
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.explore-btn {
+  background: linear-gradient(135deg, #D946A8, #9333EA);
+  color: white;
+}
+
+.explore-btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.learn-btn {
+  border: 2px solid #9333EA;
+  color: #9333EA;
+}
+
+.learn-btn:hover {
+  background-color: #9333EA;
+  color: white;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(49, 32, 68, 0.15);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 45px 6%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-image img {
+    height: 260px;
+  }
+}
+/* Why Choose SafeRent Section */
+
+.why-choose-section {
+  padding: 70px 7%;
+  background-color: #FFFFFF;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading span {
+  color: #D946A8;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  color: #312044;
+  font-size: 34px;
+  margin: 12px 0;
+}
+
+.section-heading p {
+  color: #666;
+  font-size: 16px;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  background: #FAF5FF;
+  padding: 35px 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #F3E8FF;
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(49, 32, 68, 0.1);
+}
+
+.feature-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  color: #312044;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+}
+
+/* How It Works Section */
+
+.how-it-works {
+  padding: 70px 7%;
+  background: #FFFFFF;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.step-card {
+  padding: 30px;
+  background: #FAF5FF;
+  border-radius: 14px;
+  border: 1px solid #F3E8FF;
+}
+
+.step-number {
+  color: #D946A8;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.step-card h3 {
+  color: #312044;
+  margin-bottom: 12px;
+}
+
+.step-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Home CTA Section */
+
+.home-cta {
+  padding: 60px 7%;
+  text-align: center;
+  background: #FAF5FF;
+  color: #312044;
+}
+
+.home-cta h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.home-cta p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #D946A8, #9333EA);
+  color: white;
+  padding: 13px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+}

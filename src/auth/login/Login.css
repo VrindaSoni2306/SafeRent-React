@@ -1,0 +1,157 @@
+.login-page {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #fdf2f8, #faf5ff);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 430px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(49, 32, 68, 0.12);
+}
+
+.login-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-heading h1 {
+  color: #312044;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.login-heading p {
+  color: #777;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #312044;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #e5d5ed;
+  border-radius: 9px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #9333ea;
+}
+
+.password-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-box input {
+  padding-right: 65px;
+}
+
+.show-password {
+  position: absolute;
+  right: 10px;
+  border: none;
+  background: transparent;
+  color: #9333ea;
+  cursor: pointer;
+}
+
+.login-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(90deg, #d946a8, #9333ea);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0;
+  color: #999;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5d5ed;
+}
+
+.google-button {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #e5d5ed;
+  border-radius: 9px;
+  background: white;
+  color: #312044;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.google-button:hover {
+  background: #fdf2f8;
+}
+
+.google-icon {
+  margin-right: 10px;
+  color: #d946a8;
+  font-weight: bold;
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #666;
+}
+
+.signup-text a {
+  color: #9333ea;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 28px 22px;
+  }
+
+  .login-heading h1 {
+    font-size: 25px;
+  }
+}
