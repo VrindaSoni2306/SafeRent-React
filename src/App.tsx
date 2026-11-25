@@ -14,6 +14,9 @@ import UserDashboard from './pages/user/UserDashboard';
 import Login from './auth/login/Login';
 import Signup from './auth/signup/Signup';
 
+// Owner
+import OwnerDashboard from './pages/owner/OwnerDashboard';
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +30,9 @@ function App() {
 
         {/* User Dashboard */}
         <Route path="/user/dashboard" element={<UserDashboard />} />
+
+        {/* Owner Dashboard */}
+        <Route path="/owner/dashboard" element={<OwnerDashboard />} />
 
         {/* Login and Signup */}
         <Route path="/login" element={<Login />} />
