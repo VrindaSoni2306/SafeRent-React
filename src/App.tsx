@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/Header';
@@ -9,13 +10,12 @@ import Contact from './pages/Contact';
 import Properties from './pages/Properties';
 
 import UserDashboard from './pages/user/UserDashboard';
+import OwnerDashboard from './pages/owner/OwnerDashboard';
+import AdminDashboard from './pages/admin/AdminDashboard';
 
 // Login and Signup
 import Login from './auth/login/Login';
 import Signup from './auth/signup/Signup';
-
-// Owner
-import OwnerDashboard from './pages/owner/OwnerDashboard';
 
 function App() {
   return (
@@ -33,6 +33,9 @@ function App() {
 
         {/* Owner Dashboard */}
         <Route path="/owner/dashboard" element={<OwnerDashboard />} />
+
+        {/* Admin Dashboard */}
+        <Route path="/admin" element={<AdminDashboard />} />
 
         {/* Login and Signup */}
         <Route path="/login" element={<Login />} />
