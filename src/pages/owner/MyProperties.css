@@ -1,0 +1,180 @@
+.my-properties {
+  background-color: var(--light-purple);
+}
+
+.my-properties-header {
+  margin-bottom: 30px;
+}
+
+.my-properties-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.my-properties-header p {
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.properties-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.property-item {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #eadcf5;
+  box-shadow: 0 3px 10px rgba(147, 51, 234, 0.08);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.property-info h2 {
+  color: var(--dark-purple);
+  margin-bottom: 15px;
+}
+
+.property-info p {
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.property-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.property-status {
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Status */
+
+.property-status.approved {
+  background-color: #e8f8ef;
+  color: #16834b;
+}
+
+.property-status.pending {
+  background-color: #fff5dc;
+  color: #a66a00;
+}
+
+.property-status.rejected {
+  background-color: #fde8ed;
+  color: #c6284d;
+}
+
+/* Buttons */
+
+.property-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.property-buttons button {
+  padding: 9px 16px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: var(--light-purple);
+  color: var(--primary-purple);
+  border: 1px solid var(--primary-purple);
+}
+
+.edit-btn:hover {
+  background-color: var(--primary-purple);
+  color: var(--white);
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: #c6284d;
+  border: 1px solid #c6284d;
+}
+
+.delete-btn:hover {
+  background-color: #c6284d;
+  color: var(--white);
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .property-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .property-actions {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .my-properties-header h1 {
+    font-size: 26px;
+  }
+}
+.edit-property-form {
+  background: #FDF2F8;
+  border: 1px solid #D946A8;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  max-width: 500px;
+}
+
+.edit-property-form h2 {
+  color: #9333EA;
+  margin-bottom: 20px;
+}
+
+.edit-property-form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: #312044;
+}
+
+.edit-property-form input,
+.edit-property-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #D946A8;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.edit-form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.edit-form-buttons button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #9333EA;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-form-buttons button:hover {
+  background: #D946A8;
+}
