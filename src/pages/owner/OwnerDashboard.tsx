@@ -1,6 +1,9 @@
 import './OwnerDashboard.css';
+import { useNavigate } from 'react-router-dom';
 
 function OwnerDashboard() {
+  const navigate = useNavigate();
+
   return (
     <div className="owner-dashboard page-container">
       <div className="owner-header">
@@ -36,9 +39,17 @@ function OwnerDashboard() {
         <h2>Quick Actions</h2>
 
         <div className="action-buttons">
-          <button>Add Property</button>
-          <button>My Properties</button>
-          <button>Booking Requests</button>
+          <button onClick={() => navigate('/owner/add-property')}>
+            Add Property
+          </button>
+
+          <button onClick={() => navigate('/owner/my-properties')}>
+            My Properties
+          </button>
+
+          <button onClick={() => navigate('/owner/booking-requests')}>
+            Booking Requests
+          </button>
         </div>
       </div>
     </div>

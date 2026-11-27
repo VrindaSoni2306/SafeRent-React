@@ -1,0 +1,128 @@
+.booking-requests {
+  background-color: var(--light-purple);
+}
+
+.booking-header {
+  margin-bottom: 30px;
+}
+
+.booking-header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.booking-header p {
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.booking-card {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #eadcf5;
+  box-shadow: 0 3px 10px rgba(147, 51, 234, 0.08);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.booking-info h2 {
+  color: var(--dark-purple);
+  margin-bottom: 15px;
+}
+
+.booking-info p {
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.booking-status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.booking-status.pending {
+  background-color: #fff5dc;
+  color: #a66a00;
+}
+
+.booking-status.accepted {
+  background-color: #e8f8ef;
+  color: #16834b;
+}
+
+.booking-status.rejected {
+  background-color: #fde8ed;
+  color: #c6284d;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.booking-actions button {
+  padding: 10px 18px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.accept-btn {
+  background: linear-gradient(
+    135deg,
+    var(--primary-pink),
+    var(--primary-purple)
+  );
+  color: var(--white);
+  border: none;
+}
+
+.reject-btn {
+  background-color: transparent;
+  color: #c6284d;
+  border: 1px solid #c6284d;
+}
+
+.accept-btn:hover,
+.reject-btn:hover {
+  opacity: 0.85;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 12px;
+}
+
+@media (max-width: 700px) {
+  .booking-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .booking-actions {
+    width: 100%;
+  }
+
+  .booking-actions button {
+    flex: 1;
+  }
+
+  .booking-header h1 {
+    font-size: 26px;
+  }
+}
