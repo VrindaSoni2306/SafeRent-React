@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './components/header/Header';
@@ -10,6 +9,9 @@ import Contact from './pages/Contact';
 import Properties from './pages/Properties';
 
 import UserDashboard from './pages/user/UserDashboard';
+import MyBookings from './pages/user/MyBookings';
+import MyProfile from './pages/user/MyProfile';
+
 import OwnerDashboard from './pages/owner/OwnerDashboard';
 import AdminDashboard from './pages/admin/AdminDashboard';
 
@@ -23,21 +25,24 @@ function App() {
       <Header />
 
       <Routes>
+        {/* Main Pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/properties" element={<Properties />} />
 
-        {/* User Dashboard */}
+        {/* User Routes */}
         <Route path="/user/dashboard" element={<UserDashboard />} />
+        <Route path="/user/bookings" element={<MyBookings />} />
+        <Route path="/user/profile" element={<MyProfile />} />
 
-        {/* Owner Dashboard */}
+        {/* Owner Routes */}
         <Route path="/owner/dashboard" element={<OwnerDashboard />} />
 
-        {/* Admin Dashboard */}
+        {/* Admin Routes */}
         <Route path="/admin" element={<AdminDashboard />} />
 
-        {/* Login and Signup */}
+        {/* Authentication Routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
