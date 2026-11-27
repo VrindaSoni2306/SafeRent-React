@@ -1,33 +1,41 @@
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
+  const navigate = useNavigate();
 
-  // Email aur password store karne ke liye
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("USER");
 
-  // Password show/hide karne ke liye
   const [showPassword, setShowPassword] = useState(false);
 
-  // Login form submit function
   const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     console.log("Email:", email);
-    console.log("Password:", password);
+    console.log("Role:", role);
 
-    alert("Login UI working successfully!");
+    alert("Login successful!");
+
+    if (role === "USER") {
+  navigate("/user/dashboard");
+}
+else if (role === "OWNER") {
+  navigate("/owner/dashboard");
+}
+else if (role === "ADMIN") {
+  navigate("/admin");
+}
   };
 
-  // Google login function
   const handleGoogleLogin = () => {
     alert("Google Authentication will be integrated later.");
   };
 
   return (
     <div className="login-page">
-
       <div className="login-container">
 
         <div className="login-heading">
@@ -53,7 +61,6 @@ function Login() {
             <label>Password</label>
 
             <div className="password-box">
-
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="Enter your password"
@@ -64,13 +71,27 @@ function Login() {
 
               <button
                 type="button"
-                className="show-password"
+                className="eye-button"
                 onClick={() => setShowPassword(!showPassword)}
+                aria-label={showPassword ? "Hide password" : "Show password"}
               >
-                {showPassword ? "Hide" : "Show"}
+                {showPassword ? "🙈" : "👁️"}
               </button>
-
             </div>
+          </div>
+
+          <div className="form-group">
+            <label>Login As</label>
+
+            <select
+              value={role}
+              onChange={(event) => setRole(event.target.value)}
+              required
+            >
+              <option value="USER">User</option>
+              <option value="OWNER">Owner</option>
+              <option value="ADMIN">Admin</option>
+            </select>
           </div>
 
           <button type="submit" className="login-button">
@@ -94,11 +115,10 @@ function Login() {
 
         <p className="signup-text">
           Don't have an account?
-          <a href="/signup"> Sign Up</a>
+          <Link to="/signup"> Sign Up</Link>
         </p>
 
       </div>
-
     </div>
   );
 }

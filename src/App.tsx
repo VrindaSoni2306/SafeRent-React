@@ -1,23 +1,30 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+// Components
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
+// Main Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Properties from './pages/Properties';
+import PropertyDetails from './pages/PropertyDetails';
 
+// Authentication
+import Login from './auth/login/Login';
+import Signup from './auth/signup/Signup';
+
+// User Pages
 import UserDashboard from './pages/user/UserDashboard';
 import MyBookings from './pages/user/MyBookings';
 import MyProfile from './pages/user/MyProfile';
 
+// Owner Pages
 import OwnerDashboard from './pages/owner/OwnerDashboard';
-import AdminDashboard from './pages/admin/AdminDashboard';
 
-// Login and Signup
-import Login from './auth/login/Login';
-import Signup from './auth/signup/Signup';
+// Admin Pages
+import AdminDashboard from './pages/admin/AdminDashboard';
 
 function App() {
   return (
@@ -25,11 +32,17 @@ function App() {
       <Header />
 
       <Routes>
+
         {/* Main Pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/properties" element={<Properties />} />
+        <Route path="/property/:id" element={<PropertyDetails />} />
+
+        {/* Authentication */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
         {/* User Routes */}
         <Route path="/user/dashboard" element={<UserDashboard />} />
@@ -42,9 +55,6 @@ function App() {
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminDashboard />} />
 
-        {/* Authentication Routes */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
       </Routes>
 
       <Footer />
