@@ -50,8 +50,8 @@ function MyBookings() {
   ).length;
 
   return (
-    <div className="bookings-page">
-      <div className="bookings-header">
+    <div className="my-bookings-page">
+      <div className="bookings-heading">
         <h1>My Bookings</h1>
         <p>Manage and track all your property bookings.</p>
       </div>
@@ -81,28 +81,37 @@ function MyBookings() {
       <div className="bookings-list">
         <h2>Booking History</h2>
 
-        {bookings.map((booking) => (
-          <div className="booking-card" key={booking.id}>
-            <div className="booking-info">
-              <h3>{booking.propertyName}</h3>
-              <p>{booking.location}</p>
-              <p>
-                <strong>Monthly Rent:</strong> ₹{booking.rent}
-              </p>
-              <p>
-                <strong>Booking Date:</strong> {booking.bookingDate}
-              </p>
-            </div>
+        <div className="booking-list">
+          {bookings.map((booking) => (
+            <div className="booking-card" key={booking.id}>
+              <div className="booking-info">
+                <h2>{booking.propertyName}</h2>
+                <p>{booking.location}</p>
+                <p>
+                  <strong>Monthly Rent:</strong> ₹{booking.rent}
+                </p>
+                <p>
+                  <strong>Booking Date:</strong> {booking.bookingDate}
+                </p>
+              </div>
 
-            <div className="booking-actions">
-              <span
-                className={`booking-status ${booking.status.toLowerCase()}`}
-              >
-                {booking.status}
-              </span>
+              <div className="booking-actions">
+                <span
+                  className={`booking-status ${booking.status.toLowerCase()}`}
+                >
+                  {booking.status}
+                </span>
+
+                <button
+                  className="booking-details-btn"
+                  onClick={() => alert(`Booking ID: ${booking.id}`)}
+                >
+                  View Details
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
