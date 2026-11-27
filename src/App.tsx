@@ -22,6 +22,9 @@ import MyProfile from './pages/user/MyProfile';
 
 // Owner Pages
 import OwnerDashboard from './pages/owner/OwnerDashboard';
+import AddProperty from './pages/owner/AddProperty';
+import MyProperties from './pages/owner/MyProperties';
+import BookingRequests from './pages/owner/BookingRequests';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -32,7 +35,6 @@ function App() {
       <Header />
 
       <Routes>
-
         {/* Main Pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -51,10 +53,12 @@ function App() {
 
         {/* Owner Routes */}
         <Route path="/owner/dashboard" element={<OwnerDashboard />} />
+        <Route path="/owner/add-property" element={<AddProperty />} />
+        <Route path="/owner/my-properties" element={<MyProperties />} />
+        <Route path="/owner/booking-requests" element={<BookingRequests />} />
 
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminDashboard />} />
-
       </Routes>
 
       <Footer />
