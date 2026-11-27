@@ -1,0 +1,131 @@
+/* Main Properties Page */
+
+.properties-page {
+  min-height: 80vh;
+  padding: 40px 7%;
+  background: #fdf7fc;
+}
+
+/* Heading */
+
+.properties-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.properties-heading h1 {
+  font-size: 36px;
+  color: #312044;
+  margin-bottom: 12px;
+}
+
+.properties-heading p {
+  color: #777;
+  font-size: 16px;
+}
+
+/* Filters */
+
+.property-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 45px;
+}
+
+.property-filters input,
+.property-filters select {
+  padding: 14px;
+  border: 1px solid #e5d5ed;
+  border-radius: 9px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+}
+
+.property-filters input {
+  width: 400px;
+}
+
+.property-filters select {
+  width: 190px;
+}
+
+.property-filters input:focus,
+.property-filters select:focus {
+  border-color: #9333ea;
+}
+
+/* Listing Section */
+
+.listing-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.listing-title h2 {
+  color: #312044;
+  font-size: 25px;
+}
+
+.listing-title span {
+  color: #9333ea;
+  font-weight: 600;
+}
+
+/* Property Grid */
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+/* No Properties Found */
+
+.no-properties {
+  text-align: center;
+  padding: 50px;
+  color: #777;
+  grid-column: 1 / -1;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1000px) {
+  .property-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .properties-page {
+    padding: 30px 5%;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .property-filters {
+    flex-direction: column;
+  }
+
+  .property-filters input,
+  .property-filters select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .properties-heading h1 {
+    font-size: 27px;
+  }
+
+  .listing-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

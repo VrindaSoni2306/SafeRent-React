@@ -155,3 +155,43 @@
     font-size: 25px;
   }
 }
+
+/* Password eye button */
+
+.password-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-box input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.eye-button {
+  position: absolute;
+  right: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Role dropdown */
+
+.form-group select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #e5d5ed;
+  border-radius: 9px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+  color: #312044;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  border-color: #9333ea;
+}

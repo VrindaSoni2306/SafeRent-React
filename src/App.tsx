@@ -1,16 +1,31 @@
+```tsx
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+// Components
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
+// Main Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Properties from './pages/Properties';
+import PropertyDetails from './pages/PropertyDetails';
 
-// Login component
+// Authentication
 import Login from './auth/login/Login';
 import Signup from './auth/signup/Signup';
+
+// User Pages
+import UserDashboard from './pages/user/UserDashboard';
+import MyBookings from './pages/user/MyBookings';
+import MyProfile from './pages/user/MyProfile';
+
+// Owner Pages
+import OwnerDashboard from './pages/owner/OwnerDashboard';
+
+// Admin Pages
+import AdminDashboard from './pages/admin/AdminDashboard';
 
 function App() {
   return (
@@ -18,14 +33,29 @@ function App() {
       <Header />
 
       <Routes>
+
+        {/* Main Pages */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/properties" element={<Properties />} />
+        <Route path="/property/:id" element={<PropertyDetails />} />
 
-        {/* Login Route */}
+        {/* Authentication */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+
+        {/* User Routes */}
+        <Route path="/user/dashboard" element={<UserDashboard />} />
+        <Route path="/user/bookings" element={<MyBookings />} />
+        <Route path="/user/profile" element={<MyProfile />} />
+
+        {/* Owner Routes */}
+        <Route path="/owner/dashboard" element={<OwnerDashboard />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin" element={<AdminDashboard />} />
+
       </Routes>
 
       <Footer />
@@ -34,3 +64,4 @@ function App() {
 }
 
 export default App;
+```
