@@ -1,0 +1,68 @@
+
+.manage-properties {
+  min-height: 100vh;
+  padding: 30px;
+  background: #FDF2F8;
+  color: #312044;
+}
+
+.manage-properties h1 {
+  color: #9333EA;
+  margin-bottom: 10px;
+}
+
+.manage-properties p {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.property-table {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.property-table table {
+  width: 100%;
+  min-width: 550px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.property-table th,
+.property-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.property-table th {
+  background: #FAF5FF;
+}
+
+.property-status {
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.property-status.pending {
+  background: #FFF4D6;
+  color: #946200;
+}
+
+.property-status.approved {
+  background: #E8F7ED;
+  color: #267A42;
+}
+
+.property-status.rejected {
+  background: #FCE4EC;
+  color: #C62828;
+}
+
+@media (max-width: 600px) {
+  .manage-properties {
+    padding: 18px;
+  }
+}

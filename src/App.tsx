@@ -28,6 +28,8 @@ import BookingRequests from './pages/owner/BookingRequests';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
+import ManageProperties from './pages/admin/ManageProperties';
+import ManageUsers from './pages/admin/ManageUsers';
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
 
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminDashboard />} />
+         <Route path="/admin/properties" element={<ManageProperties />} />
+        <Route path="/admin/users" element={<ManageUsers />} />
       </Routes>
 
       <Footer />
